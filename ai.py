@@ -43,9 +43,10 @@ class  AI():
             sentence = "Got it, you said" + phrase
             self.engine.say(sentence)
             self.engine.runAndWait()
-        except Exception as e:
-            print("Sorry, didn't catch that", e)
+        except:
+            print("Sorry, didn't catch that")
             self.engine.say("Sorry didnt catch that")
             self.engine.runAndWait()
+
         print("You said", phrase)
         return phrase
